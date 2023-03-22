@@ -1,0 +1,14 @@
+.equitytype-container-main {
+  @apply px-5 py-3  bg-gray-100;
+}
+.equitytype-header {
+  @apply font-bold;
+}
+
+.equitytype-content {
+  @apply grid grid-cols-4 p-3;
+}
+
+.radio-button {
+  @apply accent-green-600 h-4 w-4 align-top;
+}

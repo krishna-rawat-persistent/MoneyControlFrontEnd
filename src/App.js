@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Types from "./Components/Types/Types";
+import EquityTypes from "./Components/SubTypes/Equity/EquityTypes";
+import "./App.css";
+import Duration from "./Components/Duration/Duration";
+import Submit from "./Components/Submit/Submit";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <Types />
+      <EquityTypes />
+      <Duration />
+      <Submit />
     </div>
   );
 }

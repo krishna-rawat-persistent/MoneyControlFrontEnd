@@ -1,0 +1,11 @@
+.types-container-main {
+  @apply bg-yellow-100 py-4;
+}
+
+.types-list-container {
+  @apply w-full flex flex-row justify-between items-center px-2.5 py-0;
+}
+
+.types {
+  @apply mr-5 p-2 bg-white border-green-500 rounded-md font-semibold;
+}

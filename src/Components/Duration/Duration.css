@@ -1,0 +1,15 @@
+.duration-container-main {
+  @apply px-5 py-3  bg-gray-100;
+}
+
+.duration-header {
+  @apply font-bold;
+}
+
+.duration-content {
+  @apply grid grid-cols-10 p-3;
+}
+
+.duration-radio {
+  @apply accent-green-600 h-4 w-4 align-top;
+}
