@@ -17,6 +17,6 @@ code {
 @tailwind utilities; */
 
 @import "Components/Types/Types.css";
-@import "Components/SubTypes/Equity/EquityTypes.css";
+@import "Components/Types/SubTypes/EquityTypes.css";
 @import "Components/Duration/Duration.css";
 @import "Components/Submit/Submit.css";
