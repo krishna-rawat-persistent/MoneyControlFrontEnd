@@ -9,11 +9,7 @@ function Duration() {
         {durationList.map((item) => (
           <div>
             <label>
-              <input
-                type="radio"
-                name="duration-period"
-                className="duration-radio"
-              />
+              <input type="radio" className="duration-radio" />
               {item.name}
             </label>
           </div>

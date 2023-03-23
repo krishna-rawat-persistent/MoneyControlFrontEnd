@@ -3,5 +3,5 @@
 }
 
 .submit-button {
-  @apply bg-sky-400 px-6 py-2 rounded-md border-sky-400 text-lg font-semibold text-white;
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 border border-blue-700 rounded;
 }
