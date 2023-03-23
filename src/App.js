@@ -1,16 +1,10 @@
-import Types from "./Components/Types/Types";
-import EquityTypes from "./Components/SubTypes/Equity/EquityTypes";
 import "./App.css";
-import Duration from "./Components/Duration/Duration";
-import Submit from "./Components/Submit/Submit";
+import Common from "./Components/Common/Common";
 
 function App() {
   return (
     <div className="main-container">
-      <Types />
-      <EquityTypes />
-      <Duration />
-      <Submit />
+      <Common />
     </div>
   );
 }

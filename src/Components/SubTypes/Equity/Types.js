@@ -1,4 +1,4 @@
-export const types = [
+export const equityTypes = [
   {
     name: "Equity - ETF/Index",
   },

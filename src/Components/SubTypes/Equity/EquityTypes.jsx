@@ -1,12 +1,12 @@
 import React from "react";
-import { types } from "./Types";
+import { equityTypes } from "./Types";
 
 function EquityTypes() {
   return (
     <div className="equitytype-container-main">
       <div className="equitytype-header">EQUITY</div>
       <div className="equitytype-content">
-        {types.map((type) => (
+        {equityTypes.map((type) => (
           <div>
             <label>
               <input type="radio" name="equity-type" className="radio-button" />
