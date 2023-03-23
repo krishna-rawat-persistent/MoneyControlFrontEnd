@@ -1,16 +1,15 @@
 import React from "react";
-import { equity } from "../../Types/SubTypes";
 
-function EquityTypes() {
+function SubTypes({ type, data }) {
   return (
     <div className="equitytype-container-main">
-      <div className="equitytype-header">EQUITY</div>
+      <div className="equitytype-header">{type}</div>
       <div className="equitytype-content">
-        {equity.map((type) => (
+        {data.map((item) => (
           <div>
             <label>
               <input type="radio" name="equity-type" className="radio-button" />
-              {type.name}
+              {item.name}
             </label>
           </div>
         ))}
@@ -19,4 +18,4 @@ function EquityTypes() {
   );
 }
 
-export default EquityTypes;
+export default SubTypes;
