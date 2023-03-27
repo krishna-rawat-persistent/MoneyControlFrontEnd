@@ -1,14 +1,22 @@
-.equitytype-container-main {
-  @apply px-5 py-3  bg-gray-100;
+.subtype-container-main {
+  @apply px-5 py-3 bg-gray-100 border-[3px] border-gray-300  m-1 mb-0 border-b-0;
 }
-.equitytype-header {
+.subtype-header {
   @apply font-bold;
 }
 
-.equitytype-content {
-  @apply grid grid-cols-4 p-3;
+.subtype-content {
+  @apply grid grid-flow-row grid-cols-3 p-3 text-clip;
+}
+
+.radio-div{
+  @apply flex p-1 w-full;
 }
 
 .radio-button {
-  @apply accent-green-600 h-4 w-4 align-top;
+  @apply relative float-left mt-0.5 mr-1 h-5 w-5 accent-green-600;
+}
+
+.radio-label{
+  @apply text-ellipsis ;
 }

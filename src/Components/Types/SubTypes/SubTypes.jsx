@@ -1,14 +1,25 @@
 import React from "react";
 
-function SubTypes({ type, data }) {
+function SubTypes({ type, data, getUrl }) {
+  const handleChange = (e) => {
+    getUrl(e.target.value);
+  };
+
   return (
-    <div className="equitytype-container-main">
-      <div className="equitytype-header">{type}</div>
-      <div className="equitytype-content">
+    <div className="subtype-container-main">
+      <div className="subtype-header">{type}</div>
+      <div className="subtype-content">
         {data.map((item) => (
-          <div>
-            <label>
-              <input type="radio" name="equity-type" className="radio-button" />
+          <div className="radio-div" key={item.id}>
+            <input
+              type="radio"
+              name="stocks-type"
+              className="radio-button"
+              id={item.id}
+              value={item.value}
+              onChange={handleChange}
+            />
+            <label htmlFor={item.id} className="radio-label">
               {item.name}
             </label>
           </div>

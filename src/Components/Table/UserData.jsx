@@ -1,21 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const UserData= ({users}) => {
+const UserData = ({ users }) => {
   return (
-    <div>
-        {users.map((current_user)=>{
-            const {schemeName, marketValue, oneWeek, oneMonth} = current_user;
-       return(
-        <tr key={schemeName}>
-            <td>{schemeName}</td>
-            <td>{marketValue}</td>
-            <td>{oneWeek}</td>
-            <td>{oneMonth}</td>
-        </tr>
-       )
-       })}
-    </div>
-  )
-}
+    <>
+      {users.map((current_user) => {
+        return (
+          <tr key={current_user.schemeName} className="tableBodyRow">
+            {Object.values(current_user).map((val, index) => (
+              <td className="tableCol" key={index}>
+                {val ? val : "-"}
+              </td>
+            ))}
+          </tr>
+        );
+      })}
+    </>
+  );
+};
 
-export default UserData
+export default UserData;

@@ -9,8 +9,12 @@
 .btn {
     @apply font-bold py-2 px-4 rounded;
   }
-.btn-green {
-  @apply bg-white text-black border border-green-500;
+  
+.btn-white {
+  @apply bg-white text-black border border-green-500 focus:bg-green-500 focus:text-white;
+}
+.btn-green{
+  @apply  bg-green-500 text-white
 }
 .btn-green:hover {
   @apply bg-green-500 text-white;

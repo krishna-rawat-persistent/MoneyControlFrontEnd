@@ -1,5 +1,9 @@
 .submit-button-container {
-  @apply py-3 px-6;
+  @apply flex py-3 px-6 justify-center border-[3px] border-gray-300  m-1 mt-0 border-t-0;
+}
+
+.back-button-container {
+  @apply flex py-3 px-6 justify-center;
 }
 
 .submit-button {
