@@ -1,8 +1,15 @@
 import React from "react";
 
-function SubTypes({ type, data, getUrl }) {
-  const handleChange = (e) => {
-    getUrl(e.target.value);
+function SubTypes({ type, data, getUrl, urlVal }) {
+  const toggleSubtype = (e) => {
+    const subtype = e.target.value;
+    const idx = urlVal.indexOf(subtype);
+    if (idx === -1) {
+      urlVal += subtype + ",";
+    } else {
+      urlVal = urlVal.replace(type + ",", "");
+    }
+    getUrl(urlVal);
   };
 
   return (
@@ -12,14 +19,14 @@ function SubTypes({ type, data, getUrl }) {
         {data.map((item) => (
           <div className="radio-div" key={item.id}>
             <input
-              type="radio"
+              type="checkbox"
               name="stocks-type"
-              className="radio-button"
+              className="subtypes-checkbox"
               id={item.id}
               value={item.value}
-              onChange={handleChange}
+              onChange={toggleSubtype}
             />
-            <label htmlFor={item.id} className="radio-label">
+            <label htmlFor={item.id} className="subtypes-label">
               {item.name}
             </label>
           </div>
