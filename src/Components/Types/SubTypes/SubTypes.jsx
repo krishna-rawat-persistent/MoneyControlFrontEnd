@@ -7,7 +7,7 @@ function SubTypes({ type, data, getUrl, urlVal }) {
     if (idx === -1) {
       urlVal += subtype + ",";
     } else {
-      urlVal = urlVal.replace(type + ",", "");
+      urlVal = urlVal.replace(subtype + ",", "");
     }
     getUrl(urlVal);
   };
@@ -17,7 +17,7 @@ function SubTypes({ type, data, getUrl, urlVal }) {
       <div className="subtype-header">{type}</div>
       <div className="subtype-content">
         {data.map((item) => (
-          <div className="radio-div" key={item.id}>
+          <div className="checkbox-div" key={item.id}>
             <input
               type="checkbox"
               name="stocks-type"

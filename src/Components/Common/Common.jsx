@@ -34,7 +34,12 @@ function Common() {
     <div>
       <>
         <Types changeSelection={updateSelection} />
-        <SubTypes type={stockType} data={stockSubType} getUrl={updateUrl} />
+        <SubTypes
+          type={stockType}
+          data={stockSubType}
+          getUrl={updateUrl}
+          urlVal={url}
+        />
         <Duration getDuration={updateDuration} durationVal={duration} />
         <Submit
           toggleSubmit={updateSubmit}
