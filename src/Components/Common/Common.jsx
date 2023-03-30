@@ -48,7 +48,13 @@ function Common() {
           urlVal={url}
           durationVal={duration}
         />
-        {!submit ? <Table urlValue={url} durationValue={duration} /> : <></>}
+        {!submit && url !== "" && duration !== "" ? (
+          <Table urlValue={url} durationValue={duration} />
+        ) : (
+          <div className="note-para">
+            <p>Please Select required Values to view stocks</p>
+          </div>
+        )}
       </>
     </div>
   );

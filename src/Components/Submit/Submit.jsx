@@ -10,7 +10,7 @@ function Submit({ toggleSubmit, name, bit, urlVal, durationVal }) {
     } else if (durationVal === "") {
       alert("Please select atleast one duration");
     } else {
-      toggleSubmit(0);
+      toggleSubmit(!bit);
     }
   };
   return (
