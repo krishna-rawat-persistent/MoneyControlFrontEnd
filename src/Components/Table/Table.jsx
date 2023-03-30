@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Spinner } from "../Spinner/Spinner";
 import { tableData } from "./TableHeadingData";
 import UserData from "./UserData";
 
@@ -25,7 +26,9 @@ const Table = ({ urlValue, durationValue }) => {
     fetchUser(API);
   }, [API]);
 
-  return (
+  return users.length === 0 ? (
+    <Spinner />
+  ) : (
     <div className="table-container">
       <h2 className="table-heading"> Top Stocks </h2>
       <table className="stockTable">
