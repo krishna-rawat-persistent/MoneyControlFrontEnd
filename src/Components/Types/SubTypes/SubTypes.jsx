@@ -12,7 +12,7 @@ function SubTypes({ type, data, getUrl }) {
         {data.map((item) => (
           <div className="radio-div" key={item.id}>
             <input
-              type="radio"
+              type="checkbox"
               name="stocks-type"
               className="radio-button"
               id={item.id}

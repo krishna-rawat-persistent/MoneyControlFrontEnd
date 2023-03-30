@@ -32,31 +32,19 @@ function Common() {
 
   return (
     <div>
-      {submit ? (
-        <>
-          <Types changeSelection={updateSelection} />
-          <SubTypes type={stockType} data={stockSubType} getUrl={updateUrl} />
-          <Duration getDuration={updateDuration} durationVal={duration} />
-          <Submit
-            toggleSubmit={updateSubmit}
-            name="SUBMIT"
-            bit={submit}
-            urlVal={url}
-            durationVal={duration}
-          />
-        </>
-      ) : (
-        <>
-          <Table urlValue={url} durationValue={duration} />
-          <Submit
-            toggleSubmit={updateSubmit}
-            name="Go Back"
-            bit={submit}
-            urlVal={updateUrl}
-            durationVal={updateDuration}
-          />
-        </>
-      )}
+      <>
+        <Types changeSelection={updateSelection} />
+        <SubTypes type={stockType} data={stockSubType} getUrl={updateUrl} />
+        <Duration getDuration={updateDuration} durationVal={duration} />
+        <Submit
+          toggleSubmit={updateSubmit}
+          name="SUBMIT"
+          bit={submit}
+          urlVal={url}
+          durationVal={duration}
+        />
+        {!submit ? <Table urlValue={url} durationValue={duration} /> : <></>}
+      </>
     </div>
   );
 }
