@@ -7,7 +7,8 @@ const Table = ({ urlValue, durationValue }) => {
   const [users, setUsers] = useState([]);
 
   console.log(urlValue, ":", durationValue);
-  const API = "http://localhost:8082/stocks/" + urlValue + "/" + durationValue;
+  const API =
+    "http://43.205.220.22:8082/stocks/" + urlValue + "/" + durationValue;
 
   const fetchUser = async (url) => {
     try {
