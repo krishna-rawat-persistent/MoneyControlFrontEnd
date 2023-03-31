@@ -9,7 +9,7 @@ const Table = ({ urlValue, durationValue }) => {
 
   console.log(urlValue, ":", durationValue);
   const API =
-    "http://43.205.220.22:8082/stocks/" + urlValue + "/" + durationValue;
+    "http://ec2-43-205-220-22.ap-south-1.compute.amazonaws.com:8082/stocks/" + urlValue + "/" + durationValue;
 
   const fetchUser = async (url) => {
     try {
@@ -27,7 +27,9 @@ const Table = ({ urlValue, durationValue }) => {
   }, [API]);
 
   return users.length === 0 ? (
-    <Spinner />
+    <div className="spinner"> 
+      <Spinner />
+    </div>
   ) : (
     <div className="table-container">
       <h2 className="table-heading"> Top Stocks </h2>

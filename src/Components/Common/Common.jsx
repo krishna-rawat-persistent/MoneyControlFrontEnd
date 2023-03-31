@@ -21,6 +21,7 @@ function Common() {
   const updateSelection = (type, data) => {
     setStockType(type);
     setSubType(data);
+    setUrl("");
   };
 
   console.log(url, ":", duration);
