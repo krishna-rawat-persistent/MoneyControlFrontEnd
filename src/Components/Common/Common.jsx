@@ -48,7 +48,7 @@ function Common() {
           urlVal={url}
           durationVal={duration}
         />
-        {!submit && url !== "" && duration !== "" ? (
+        {url !== "" && duration !== "" ? (
           <Table urlValue={url} durationValue={duration} />
         ) : (
           <div className="note-para">
