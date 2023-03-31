@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Types from "../Types/Types";
 import Duration from "../Duration/Duration";
-import Submit from "../Submit/Submit";
 import SubTypes from "../Types/SubTypes/SubTypes";
 import { equity } from "../Types/SubTypes/SubTypeList";
 import Table from "../Table/Table";
@@ -9,13 +8,9 @@ import Table from "../Table/Table";
 function Common() {
   const [stockType, setStockType] = useState("EQUITY");
   const [stockSubType, setSubType] = useState(equity);
-  const [submit, setSubmit] = useState(1);
-  const [url, setUrl] = useState("");
+   const [url, setUrl] = useState("");
   const [duration, setDuration] = useState("");
 
-  const updateSubmit = (bit) => {
-    setSubmit(bit);
-  };
   const updateUrl = (val) => {
     setUrl(val);
   };
@@ -41,13 +36,6 @@ function Common() {
           urlVal={url}
         />
         <Duration getDuration={updateDuration} durationVal={duration} />
-        <Submit
-          toggleSubmit={updateSubmit}
-          name="SUBMIT"
-          bit={submit}
-          urlVal={url}
-          durationVal={duration}
-        />
         {url !== "" && duration !== "" ? (
           <Table urlValue={url} durationValue={duration} />
         ) : (
