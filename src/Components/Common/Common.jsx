@@ -16,8 +16,9 @@ function Common() {
   const updateSubmit = (bit) => {
     setSubmit(bit);
   };
-  const updateUrl = (val) => {
+  const updateUrl = (val, data) => {
     setUrl(val);
+    setSubType(data);
   };
   const updateDuration = (val) => {
     setDuration(val);

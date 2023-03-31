@@ -6,12 +6,12 @@ import UserData from "./UserData";
 
 const Table = ({ urlValue, durationValue }) => {
   const [users, setUsers] = useState([]);
+  const API = "http://localhost:8082/stocks/" + urlValue + "/" + durationValue;
 
-  console.log(urlValue, ":", durationValue);
-  const API =
-    "http://ec2-43-205-220-22.ap-south-1.compute.amazonaws.com:8082/stocks/" + urlValue + "/" + durationValue;
+  console.log(API);
 
   const fetchUser = async (url) => {
+    setUsers([]);
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -27,7 +27,7 @@ const Table = ({ urlValue, durationValue }) => {
   }, [API]);
 
   return users.length === 0 ? (
-    <div className="spinner"> 
+    <div className="spinner">
       <Spinner />
     </div>
   ) : (
