@@ -6,7 +6,11 @@ import UserData from "./UserData";
 
 const Table = ({ urlValue, durationValue }) => {
   const [users, setUsers] = useState([]);
-  const API = "http://localhost:8082/stocks/" + urlValue + "/" + durationValue;
+  const API =
+    "http://ec2-43-205-220-22.ap-south-1.compute.amazonaws.com:8082/stocks/" +
+    urlValue +
+    "/" +
+    durationValue;
 
   console.log(API);
 
